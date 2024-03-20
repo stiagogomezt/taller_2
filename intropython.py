@@ -24,3 +24,28 @@ a=True
 b=False
 print(a and b)
 #los operadores booleanos y de comparacion son muy utilizados al definir condiciones 
+#estructuras de control de flujo:
+#en general un programa se ejecuta linea por linea de manera secuencial,se puede romper esa secuencialidad empleando conjuntos de expresiones que permiten 
+#1 seleccionar  la ejecucion de bloque de cdigo
+# 2 repetir la ejecucion d eun bloque de codigo 
+# 3 seleccionar entre ejecutar un bloque de codigo u otro bloque de codigo
+# de esta manera podemos romper la secuencialidad
+#principios del paradigma de programacion estructurado
+
+#Sentencia if. Si se cumple una condicion se ejecuta un bloque de codigo (se evalua como true)
+print ("linea1")
+
+print ("linea2")
+
+if 5>3 or 3<7 :
+    print ("esto se muestra si la condicion es verdadera")
+else:
+    print ("esto se muestra si la condicion es false")
+    
+entrada = int(input("cuantos años tiene?"))
+if entrada < 18:
+    print ("es un menor de edad")
+else:
+    print("es mayor")
+    
+    #taller crear un programa en python que genere un numero aleatorio entre 2 y 12. si el numero es 7 imprimir gano si no imprimir deje el juego
