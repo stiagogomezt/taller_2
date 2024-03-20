@@ -1,0 +1,1 @@
+#comentario de una linea todo lo que va despues de la linea es ignorado por el interprte de python
