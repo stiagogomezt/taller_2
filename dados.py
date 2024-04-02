@@ -1,9 +1,4 @@
-import random 
-print("lance el dado")
-numero=random.randint(2,12)
-
-if numero == 7:
-    print( numero,"gano el juego")
-else :
-   print(numero, "deje el juego")
-    
+milista[1,2,3,45,67,87,34556,]
+for x in milista:
+    if x<50:
+        print("grande")
