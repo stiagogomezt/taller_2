@@ -58,27 +58,31 @@
      #1. Imprima los numeros impares entre - numero y numero
      #2.Imprima los numeros primos entre 0 y numero 100
      
-def es_primo(num):
-    if num <= 1:
+def es_primo(numero):
+    if numero <= 1:
         return False
-    for i in range(2, int(num**0.5) + 1):
-        if num % i == 0:
+    for i in range(2, int(numero ** 0.5) + 1):
+        if numero % i == 0:
             return False
     return True
 
+def imprimir_impares_entre_negativo_y_positivo(numero):
+    for i in range(-numero, numero + 1):
+        if i % 2 != 0:
+            print(i, end=" ")
+
+def imprimir_primos_entre_0_y_multiplicado_por_100(numero):
+    limite_superior = numero * 100
+    for i in range(limite_superior + 1):
+        if es_primo(i):
+            print(i, end=" ")
+
 def main():
-    try:
-        numero_usuario = int(input("Ingrese un número: "))
-        print("Números impares entre -{} y {}:".format(numero_usuario, numero_usuario))
-        for num_imp in range(-numero_usuario, numero_usuario + 1):
-            if num_imp % 2 != 0:
-                print(num_imp, end=" ")
-        print("\nNúmeros primos entre 0 y 100:")
-        for num_primo in range(101):
-            if es_primo(num_primo):
-                print(num_primo, end=" ")
-    except ValueError:
-        print("Por favor, ingrese un número válido.")
+    numero = int(input("Introduce un número: "))
+    print("Números impares entre -{} y {}:".format(numero, numero))
+    imprimir_impares_entre_negativo_y_positivo(numero)
+    print("\nNúmeros primos entre 0 y {}:".format(numero * 100))
+    imprimir_primos_entre_0_y_multiplicado_por_100(numero)
 
 if __name__ == "__main__":
     main()
